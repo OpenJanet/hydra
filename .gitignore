@@ -1,0 +1,9 @@
+venv3/
+venv/
+.DS_Store
+*.pyc
+*.log
+*.egg-info
+.idea
+.history
+.pytype/
