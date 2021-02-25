@@ -9,8 +9,6 @@ from marshmallow import fields, Schema
 rebar = Rebar()
 registry = rebar.create_handler_registry(prefix='/api')
 
-app = Flask(__name__)
-
 
 def create_app() -> Flask:
     app = Flask(__name__)
