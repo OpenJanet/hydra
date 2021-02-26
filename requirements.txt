@@ -2,3 +2,4 @@ flask
 flask-rebar
 requests
 marshmallow
+gunicorn
