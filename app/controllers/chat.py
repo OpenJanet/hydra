@@ -1,4 +1,5 @@
 import requests
+import os
 
 from flask_rebar import errors
 
@@ -11,7 +12,8 @@ from app.schemas.chat import ChatSchema
 def post_chat():
     # TODO: Do not use dockers internal host.
     chat = rebar.validated_body
-    resp = requests.post('http://host.docker.internal:5005/webhooks/rest/webhook',
+    resp = requests.post(os.getenv('JANET_URL',
+                         'http://localhost:5005/webhooks/rest/webhook'),
                          json=chat)
 
     return resp.json()[0]
